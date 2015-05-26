@@ -26,6 +26,11 @@ describe('findSquare', function(){
 
 describe('makeSquare', function(){
   it("splits the string into the appropriate square lengths", function(){
+    expect(makeSquare("dat fat cats")).to.include.members(["datf", "atca", "ts"]);
+  });
+
+  it("splits the string into the appropriate square lengths", function(){
     expect(makeSquare("dat fat cat")).to.include.members(["dat", "fat", "cat"]);
   });
+
 });
