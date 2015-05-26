@@ -26,11 +26,17 @@ describe('findSquare', function(){
 
 describe('makeSquare', function(){
   it("splits the string into the appropriate square lengths", function(){
-    expect(makeSquare("dat fat cats")).to.include.members(["datf", "atca", "ts"]);
+    expect(makeSquare("dat fat cat")).to.equal("dfcaaattt");
   });
 
-  it("splits the string into the appropriate square lengths", function(){
-    expect(makeSquare("dat fat cat")).to.include.members(["dat", "fat", "cat"]);
-  });
+  // it("splits the string into the appropriate square lengths", function(){
+  //   expect(makeSquare("dat fat cat")).to.include.members(["dat", "fat", "cat"]);
+  // });
 
 });
+
+// describe('encode', function(){
+//   it("removes first letter from each row to encode message", function(){
+//     expect(encode("dat fat cat")).to.equal(["dfcaa", "attt"]);
+//   });
+// });

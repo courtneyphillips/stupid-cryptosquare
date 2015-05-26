@@ -17,22 +17,50 @@ var findSquare = function(string){
 }
 
 var makeSquare = function(newString){
-  var letterArray = []
-
+  // var letterArray = []
   var letters = removeSpace(newString)
   var rowLength = findSquare(letters)
+  var letterArray = letters.split('')
+  var newWord = []
+    //
+    // newWord.push(letterArray[i])
+    // var newIndex = i + rowLength
+    // newWord.push(letterArray[newIndex])
+
+
+
   var sliceBegin = 0
-  var sliceEnd = rowLength
+  var sliceEnd = 1
 
   for (var i = 0; i < rowLength; i++){
     var row = letters.slice(sliceBegin, sliceEnd)
-    letterArray.push(row)
-    sliceBegin += rowLength
-    sliceEnd += rowLength
+    letterArray.push(row.split(''))
   }
-  
-  return letterArray
+
+  sliceBegin += rowLength
+  sliceEnd += rowLength
+  return row
 }
+
+// var encode = function(finalString){
+//   var square = makeSquare(finalString)
+//   var finalArray = []
+//   var indexLocation = 0
+//
+//   square.forEach(function(element, index, array) {
+//     var letters = element.split('')
+//     var singleLetter = letters.shift();
+//       array.push(singleLetter)
+//   });
+//
+//   var row = finalArray[0]
+//     return square
+
+
+
+
+
+
 
 
 $(document).ready(function() {
